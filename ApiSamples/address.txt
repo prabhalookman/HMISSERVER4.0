@@ -1,0 +1,72 @@
+1.getAddress
+2.addAddress
+3.deleteAddress
+4.updateAddress
+
+getAddress
+----------
+query{
+  getAddress{
+    type
+    address_type
+  }
+}
+
+addAddress
+----------
+mutation {
+  addAddress(
+    address: {
+      type: "Head Office"
+      address_type: "New Address"
+      map: "annanagarlocation"
+      address1: 1
+      address2: "Guindy"
+      pin: "6221008"
+      phone_country: "India"
+      phone_no: "9884098840"
+      site_id: "asd12",
+      status: true
+    }
+  ) {
+    type
+    address_type
+    map
+    address1
+    address2
+    pin
+    phone_country
+    phone_no
+    site_id
+  }
+}
+
+deleteAddress
+------------
+mutation {
+  deleteAddress(addressID: "60408aa12877242b988e8212") {
+    _id
+    phone_no
+    status
+  }
+}
+
+updateAddress
+--------------
+mutation {
+  updateAddress(
+    addressID: "60408aa12877242b988e8212"
+    address: { type: "Branch Office", status: true }
+  ) {
+    type
+    address_type
+    map
+    address1
+    address2
+    pin
+    phone_country
+    phone_no
+    site_id
+    status
+  }
+}

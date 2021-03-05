@@ -1,0 +1,90 @@
+1.getCategory
+2.addCategory
+3.updateCategory
+4.deleteCategory
+
+query{
+  getCategory{
+    _id
+    category_name
+    icon_path
+  }
+}
+
+addCategory
+-----------
+mutation {
+  addCategory(
+    category: {
+      category_name: "Hospital"
+      parant_category_id: "pi123"
+      icon: ""
+      icon_path: ""
+      type: ""
+      type_group: { site_id: "123" }
+      active: true
+      deleted: false
+      created_onUtc: null
+      modified_onUtc: null
+      status: true
+    }
+  ) {
+    category_name
+    parant_category_id
+    icon
+    icon_path
+    type
+    type_group {
+      site_id
+    }
+    active
+    deleted
+    created_onUtc
+    modified_onUtc
+    status
+  }
+}
+
+updateCategory
+--------------
+mutation {  
+  updateCategory(
+    categoryID: "604092008afd663e1488da92",
+    category: {
+      category_name: "Hospital"
+      parant_category_id: "pi123"
+      icon: "HMIsIcon"
+      icon_path: ""
+      type: ""
+      type_group: { site_id: "123" }
+      active: true
+      deleted: false
+      created_onUtc: null
+      modified_onUtc: null
+      status: false
+    }
+  ) {
+    category_name
+    parant_category_id
+    icon
+    icon_path
+    type
+    type_group {
+      site_id
+    }
+    active
+    deleted
+    created_onUtc
+    modified_onUtc
+    status
+  }
+}
+
+deleteCategory
+-------------
+mutation {
+  deleteCategory(categoryID: "604092008afd663e1488da92") {
+    _id
+    status
+  }
+}

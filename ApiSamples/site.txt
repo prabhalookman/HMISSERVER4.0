@@ -1,0 +1,62 @@
+1.getSite
+2.addSite
+3.updateSite
+4.deleteSite
+
+getSite
+--------
+query{
+  getSite{
+    DefaultLanguageId
+    DisplayName
+    status
+  }
+}
+
+addSite
+--------
+mutation {
+  addSite(
+    site: {
+      DefaultLanguageId: ""
+      DisplayOrder: 2
+      DisplayName: ""
+      status: true
+    }
+  ) {
+    _id
+    DefaultLanguageId
+    DisplayOrder
+    DisplayName
+    status
+  }
+}
+
+updateSite
+----------
+mutation {
+  updateSite(
+    siteID:"6040b0fd31cd592124fccc73"
+    site: {
+      DefaultLanguageId: "3"
+      DisplayOrder: 2
+      DisplayName: "HMIS Site"
+      status: true
+    }
+  ) {
+    _id
+    DefaultLanguageId
+    DisplayOrder
+    DisplayName
+    status
+  }
+}
+
+deleteSite
+----------
+mutation {
+  deleteSite(siteID: "6040b0fd31cd592124fccc73") {
+    _id
+    status
+  }
+}

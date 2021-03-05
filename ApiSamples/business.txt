@@ -1,0 +1,64 @@
+1.addBusiness
+
+
+addBusiness
+------------mutation {
+  addBusiness(
+    business: {
+      site_id: "123"
+      type: "New"
+      name: "GRT"
+      size: 5
+      availability_type: "available"
+      createdOn_utc: ""
+      billingAddress: "T.Nagar"
+      shipppingAddress: "Anna Nagar"
+      phone_country: "India"
+      phone_no: "9884098840"
+      url: ""
+      addresses: ["60408aa12877242b988e8212"]
+      category_ids: ["604092008afd663e1488da92"]
+      timings: {        
+        timing: [
+          {
+            work_day_id: "1"
+            work_day_name: "Monday"
+            index: "1"
+            name: "Lunch"
+            start_time: "11:00:00"
+            end_time: "11:00:00"
+            is_day_off: 1
+            is_special_day: 2
+            special: 3
+            availability_type_id: "11:00:00"
+            location: "Chennai"
+            data_source: "sdfs"
+            breaktime: [
+              {
+                start_time: "11:00:00"
+                start_hour: "12:00:00"
+                start_minute: "140"
+                end_time: "5:00:00"
+                end_hour: "11:00:00"
+                end_minute: "120"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ) {
+    site_id
+    name
+    timings {
+      timing {
+        work_day_name
+        work_day_id
+        breaktime {
+          start_hour
+          start_time
+        }
+      }
+    }
+  }
+}

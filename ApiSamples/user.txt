@@ -1,0 +1,41 @@
+1.addUser
+2.updateUser
+3.deleteUser
+
+addUser
+---------
+mutation{
+  addUser( user:{
+    user_name:"Praba"
+    first_name:"Praba2"
+    password_salt:"k2gafTk="    
+  }){
+    user_name
+    first_name
+  }
+}
+
+updateUser
+----------
+mutation {
+  updateUser(
+    userID: "6041fcf6872ae829d47043cc"
+    user: {
+      user_name: "PrabaK"
+      first_name: "Praba2"
+      password_salt: "k2gafTk="
+    }
+  ) {
+    user_name
+    first_name
+  }
+}
+
+deleteUser
+----------
+mutation {
+  deleteUser(userID: "6041fcf6872ae829d47043cc"){
+    first_name
+    status
+  }
+}

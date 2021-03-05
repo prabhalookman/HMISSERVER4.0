@@ -1,0 +1,55 @@
+1.addRole
+2.updateRole
+3.deleteRole
+
+addRole
+-------
+mutation {
+  addRole(
+    role: {
+      Name: "Admin"
+      DisplayOrder: 1
+      Created_onUtc: ""
+      site_id: "123"
+      status: true
+    }
+  ) {
+    _id
+    Name
+    DisplayOrder
+    Created_onUtc
+    site_id
+    status
+  }
+}
+
+updateRole
+----------
+mutation {
+  updateRole(
+    roleID: "6040acd73ff38f2b5cf009e5"
+    role: {
+      Name: "HR"
+      DisplayOrder: 1
+      Created_onUtc: ""
+      site_id: "123"
+      status: true
+    }
+  ) {
+    _id
+    Name
+    DisplayOrder
+    Created_onUtc
+    site_id
+    status
+  }
+}
+
+deleteRole
+----------
+mutation {  
+  deleteRole(roleID: "6040acd73ff38f2b5cf009e5") {
+    _id
+    status
+  }
+}

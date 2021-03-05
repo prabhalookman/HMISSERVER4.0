@@ -1,0 +1,46 @@
+{
+  "name": "hmisserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon inspect --exec babel-node index.js",
+    "watch": "nodemon",
+    "debug": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "apollo-server-express": "^2.14.1",
+    "aws-sdk": "^2.741.0",
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "cryptr": "^6.0.2",
+    "dayjs": "^1.9.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "faker": "^5.1.0",
+    "graphql": "^15.0.0",
+    "graphql-iso-date": "^3.6.1",
+    "graphql-type-json": "^0.3.2",
+    "jsonwebtoken": "^8.5.1",
+    "moment-timezone": "^0.5.31",
+    "mongodb": "^3.5.8",
+    "mongoose": "^5.9.18",
+    "querystring": "^0.2.0",
+    "random": "^2.2.0",
+    "typescript": "^3.9.5",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/register": "^7.10.3",
+    "nodemon": "^2.0.4"
+  }
+}
