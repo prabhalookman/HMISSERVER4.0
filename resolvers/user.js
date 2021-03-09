@@ -1,8 +1,8 @@
 export default {
     Query: {
-        getUser: (parent, args, context, info) => {
-            let _business = {}
-            return _business
+        getUser: async (parent, args, context, info) => {
+            let User = await context.models.User.find({})            
+            return User
         }
     },
     Mutation: {
@@ -77,3 +77,10 @@ export default {
         // }
     }
 }
+
+/*
+addBusiness : (parent, args, context, info) => {
+            let _business = {}
+            return _business
+        }
+*/
