@@ -3,6 +3,7 @@ import { gql } from 'apollo-server-express';
 export default gql`
 
 type user {
+    _id: ID,
     user_name: String,
     first_name: String,
     last_name: String,
@@ -93,6 +94,7 @@ type user_breaktime {
 }
 
 input userInput {
+    _id: ID,
     user_name: String,
     first_name: String,
     last_name: String,
